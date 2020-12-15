@@ -8,3 +8,23 @@ red - #ee5253
 
 */
 
+body {
+  background: url(assets/burger-friends.jpg) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+.top-banner {
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  background: #0fb9b1;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+}
+
+.top-banner > button {
+  /* font-family: 'Roboto', sans-serif; */
+  font-size: larger;
+  text-align: right;
+}
