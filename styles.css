@@ -18,13 +18,43 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: larger;
   background: #0fb9b1;
-  padding-top: 1px;
-  padding-bottom: 1px;
   padding-left: 30px;
+  display: flex;
 }
 
 .top-banner > button {
-  /* font-family: 'Roboto', sans-serif; */
-  font-size: larger;
-  text-align: right;
+  font-size: large;
+  border-radius: 6px;
+  border: hidden;
+  padding: 12px;
+  margin-left: 1850px;
+  margin-bottom: 20px;
+  margin-top: 20px
+}
+
+.left-box {
+  text-align: left;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  background: rgba(225, 225, 225, .9);
+  float: left;
+  width: 600px;
+  height: 600px;
+  padding: 100px;
+  margin-top: 100;
+  margin-left: 200px;
+}
+
+.right-box {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  width: 600px;
+  height: 600px;
+  background: rgba(225, 225, 225, .9);
+  float: right;
+  padding: 100px;
+  margin-top: 100;
+  margin-right: 200px;
 }
