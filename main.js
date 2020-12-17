@@ -24,6 +24,12 @@ function checkingRadioButtons() {
     rightBox.innerHTML = `
       <h2>You should make:</h2>
       <h3>${desserts[getRandomIndex(desserts)]}!`
+  }else {
+    rightBox.innerHTML = `
+      <h2>You should make:</h2>
+      <h3>${sides[getRandomIndex(sides)]}!</h3>
+      <h3>${mains[getRandomIndex(mains)]}!</h3>
+      <h3>${desserts[getRandomIndex(desserts)]}!</h3>`
   }
 }
 

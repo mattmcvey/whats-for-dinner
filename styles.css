@@ -17,6 +17,7 @@ body {
 
 .top-banner {
   position: fixed;
+  justify-content: space-between;
   width: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: larger;
@@ -26,12 +27,11 @@ body {
 }
 
 .top-banner > button {
-  position:fixed;
   font-size: large;
   border-radius: 6px;
   border: hidden;
   padding: 12px;
-  margin-left: 1550px;
+  margin-right: 100px;
   margin-bottom: 20px;
   margin-top: 20px
 }
@@ -105,5 +105,6 @@ body {
 .right-box > h3 {
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
-  margin-top: 0px
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
