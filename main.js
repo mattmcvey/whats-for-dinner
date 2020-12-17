@@ -3,14 +3,14 @@ var suggestedFood = document.querySelector('.you-should-make');
 var letsCookButton = document.querySelector(".lets-cook-button");
 var cookpot = document.querySelector(".cookpot");
 var rightBox = document.querySelector(".right-box");
-
+var sidesButton = document.querySelectorAll("id")
 
 letsCookButton.addEventListener('click', checkingRadioButtons)
 
 function checkingRadioButtons() {
   event.preventDefault();
   var checkedDish;
-  var foods = document.querySelectorAll("input[name='food']");
+  var foods = document.querySelectorAll("input");
   for(var i = 0; i < foods.length; i++){
     if(foods[i].checked){
       checkedDish = foods[i].value;
