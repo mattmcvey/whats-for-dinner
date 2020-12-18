@@ -15,8 +15,13 @@ body {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .top-banner {
   position: fixed;
+  justify-content: space-between;
   width: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: larger;
@@ -26,12 +31,11 @@ body {
 }
 
 .top-banner > button {
-  position:fixed;
   font-size: large;
   border-radius: 6px;
   border: hidden;
   padding: 12px;
-  margin-left: 1550px;
+  margin-right: 100px;
   margin-bottom: 20px;
   margin-top: 20px
 }
@@ -105,5 +109,37 @@ body {
 .right-box > h3 {
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
-  margin-top: 0px
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.bottom-nav {
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(225, 225, 225, .9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  float: left;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+.bottom-nav > label {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.bottom-nav > input {
+  padding: 10px;
+}
+
+.bottom-nav > button {
+  background: #0fb9b1;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 10px;
+  border-radius: 6px;
+  border: hidden;
+  padding: 10px;
 }
