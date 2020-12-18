@@ -7,8 +7,15 @@ var sidesButton = document.querySelector("#choice-1");
 var mainsButton = document.querySelector("#choice-2");
 var dessertsButton = document.querySelector("#choice-3");
 var entireButton = document.querySelector("#choice-4");
+var bottomNav = document.querySelector(".bottom-nav")
+var addRecipeButton = document.querySelector(".add-recipe-button")
 
+addRecipeButton.addEventListener('click', makeBottomNavAppear)
 letsCookButton.addEventListener('click', checkingRadioButtons)
+
+function makeBottomNavAppear() {
+  bottomNav.classList.remove("hidden")
+}
 
 function checkingRadioButtons() {
   event.preventDefault();
