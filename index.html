@@ -6,9 +6,15 @@
   <body>
     <section class="top-banner">
       <h2>What's for Dinner?</h2>
-      <button class="add-recipe-button">ADD A RECIPE</button>
+      <button class="add-recipe-button hidden">ADD A RECIPE</button>
     </section>
-    <section class="center-page-boxes">
+    <form class="login">
+      <h2>Login:</h2>
+      <label for="username">Name:</label>
+      <input type="text" id="name"><br>
+      <button class="submit">SUBMIT</button>
+    </form>
+    <section class="center-page-boxes hidden">
       <form class="left-box">What are you looking for?<span class="required">&#42;</span>
         <div class="buttons">
           <input type="radio" id="choice-1" name="food" value="side">

@@ -10,12 +10,18 @@ var entireButton = document.querySelector("#choice-4");
 var bottomNav = document.querySelector(".bottom-nav");
 var addRecipeButton = document.querySelector(".add-recipe-button");
 var recipeType = document.querySelector("#left-input");
-var recipeName = document.querySelector("#right-input")
-var addNewButton = document.querySelector(".add-new")
+var recipeName = document.querySelector("#right-input");
+var addNewButton = document.querySelector(".add-new");
+var submitButton = document.querySelector(".submit");
+var submitInput = document.querySelector("#name");
+var centerBoxes = document.querySelector(".center-page-boxes");
+var loginBox = document.querySelector(".login");
+var topBanner = document.querySelector(".top-banner")
 
-addRecipeButton.addEventListener('click', makeBottomNavAppear)
-letsCookButton.addEventListener('click', checkingRadioButtons)
-addNewButton.addEventListener('click', addRecipe)
+addRecipeButton.addEventListener('click', makeBottomNavAppear);
+letsCookButton.addEventListener('click', checkingRadioButtons);
+addNewButton.addEventListener('click', addRecipe);
+submitButton.addEventListener('click', submitLoginName);
 
 function addRecipe() {
   event.preventDefault();
@@ -73,6 +79,18 @@ function checkingRadioButtons() {
   }
 }
 
+function submitLoginName() {
+  event.preventDefault();
+  var name = submitInput.value;
+  addRecipeButton.classList.remove("hidden");
+  centerBoxes.classList.remove("hidden");
+  loginBox.classList.add("hidden");
+  // topBanner.innerHTML = `
+  //   <h2>What's for Dinner?</h2>
+  //   <h3>Welcome, ${name}! What's for dinner tonight?</h3>
+  //   <button class="add-recipe-button">ADD A RECIPE</button>
+  // `
+}
 
 
 function getRandomIndex(array) {
