@@ -7,11 +7,40 @@ var sidesButton = document.querySelector("#choice-1");
 var mainsButton = document.querySelector("#choice-2");
 var dessertsButton = document.querySelector("#choice-3");
 var entireButton = document.querySelector("#choice-4");
-var bottomNav = document.querySelector(".bottom-nav")
-var addRecipeButton = document.querySelector(".add-recipe-button")
+var bottomNav = document.querySelector(".bottom-nav");
+var addRecipeButton = document.querySelector(".add-recipe-button");
+var recipeType = document.querySelector("#left-input");
+var recipeName = document.querySelector("#right-input")
+var addNewButton = document.querySelector(".add-new")
 
 addRecipeButton.addEventListener('click', makeBottomNavAppear)
 letsCookButton.addEventListener('click', checkingRadioButtons)
+addNewButton.addEventListener('click', addRecipe)
+
+function addRecipe() {
+  event.preventDefault();
+  var lowerCaseType = recipeType.value.toLowerCase()
+  if(lowerCaseType === "side"){
+    sides.push(recipeName.value)
+    rightBox.innerHTML = `
+    <h2>You should make:</h2>
+    <h3>${recipeName.value}!</h3>`
+  } else if(lowerCaseType === "main dish"){
+    mains.push(recipeName.value)
+    rightBox.innerHTML = `
+    <h2>You should make:</h2>
+    <h3>${recipeName.value}!</h3>`
+  } else if(lowerCaseType === "dessert"){
+    desserts.push(recipeName.value)
+    rightBox.innerHTML = `
+    <h2>You should make:</h2>
+    <h3>${recipeName.value}!</h3>`
+  } else {
+    rightBox.innerHTML = `
+      <h2>ERROR! Recipe Type: ${recipeType.value} is not a valide type! Please choose from radio button selections.</h2>
+      `
+  }
+}
 
 function makeBottomNavAppear() {
   bottomNav.classList.remove("hidden")
@@ -22,23 +51,29 @@ function checkingRadioButtons() {
   if(sidesButton.checked){
     rightBox.innerHTML = `
       <h2>You should make:</h2>
-      <h3>${sides[getRandomIndex(sides)]}!`
+      <h3>${sides[getRandomIndex(sides)]}!
+      `
   }else if(mainsButton.checked){
     rightBox.innerHTML = `
       <h2>You should make:</h2>
-      <h3>${mains[getRandomIndex(mains)]}!`
+      <h3>${mains[getRandomIndex(mains)]}!
+      `
   }else if(dessertsButton.checked){
     rightBox.innerHTML = `
       <h2>You should make:</h2>
-      <h3>${desserts[getRandomIndex(desserts)]}!`
-  }else {
+      <h3>${desserts[getRandomIndex(desserts)]}!
+      `
+  }else if(entireButton.checked) {
     rightBox.innerHTML = `
       <h2>You should make:</h2>
       <h3>${sides[getRandomIndex(sides)]}!</h3>
       <h3>${mains[getRandomIndex(mains)]}!</h3>
-      <h3>${desserts[getRandomIndex(desserts)]}!</h3>`
+      <h3>${desserts[getRandomIndex(desserts)]}!</h3>
+      `
   }
 }
+
+
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
