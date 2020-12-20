@@ -143,3 +143,29 @@ body {
   border: hidden;
   padding: 10px;
 }
+
+.login {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  width: 300px;
+  height: 100px;
+  background: rgba(225, 225, 225, .9);
+  float: right;
+  padding: 100px;
+  margin-top: 10px;
+  margin-right: 600px;
+}
+
+.login > label, input {
+  margin-bottom: 10px;
+}
+
+.submit {
+  background: #0fb9b1;
+  font-size: 15px;
+  font-family: 'Roboto', sans-sans-serif;
+  border-radius: 6px;
+  border: hidden;
+  padding: 10px;
+  margin-top: 10px;
+}
