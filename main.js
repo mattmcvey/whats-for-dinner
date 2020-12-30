@@ -16,7 +16,8 @@ var submitButton = document.querySelector(".submit");
 var submitInput = document.querySelector("#name");
 var centerBoxes = document.querySelector(".center-page-boxes");
 var loginBox = document.querySelector(".login");
-var topBanner = document.querySelector(".top-banner")
+var topBanner = document.querySelector(".top-banner");
+var loginBanner = document.querySelector(".login-name");
 
 addRecipeButton.addEventListener('click', makeBottomNavAppear);
 letsCookButton.addEventListener('click', checkingRadioButtons);
@@ -85,11 +86,9 @@ function submitLoginName() {
   addRecipeButton.classList.remove("hidden");
   centerBoxes.classList.remove("hidden");
   loginBox.classList.add("hidden");
-  // topBanner.innerHTML = `
-  //   <h2>What's for Dinner?</h2>
-  //   <h3>Welcome, ${name}! What's for dinner tonight?</h3>
-  //   <button class="add-recipe-button">ADD A RECIPE</button>
-  // `
+  loginBanner.innerText = `
+    Welcome, ${name}! What's for dinner tonight?
+  `
 }
 
 
